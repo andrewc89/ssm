@@ -9,7 +9,7 @@ export class Server {
         this.dbConfig = data.dbConfig;
     }
     getStats(cb) {
-        let child = spawn("../scripts/readStats.cmd", [this.statsFilePath]);
+        let child = spawn("../scripts/readData.cmd", [this.statsFilePath]);
         child.stdout.on("data", cb);
     }
     getJobHistory(cb) {
